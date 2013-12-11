@@ -60,7 +60,7 @@ public class DBpediaConnectorTest {
      * Test of isNoEntry method, of class DBpediaConnector.
      */
     @Test
-    public void testIsNoEntry() throws IOException {
+    public void testIsNoEntry() throws IOException, InterruptedException {
         System.out.println("isNoEntry");
         Boolean expResult = false;
         Boolean result = instance.isNoEntry();

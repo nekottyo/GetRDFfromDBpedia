@@ -23,11 +23,12 @@ class DBpediaConnector {
     String currentUrl;
 
     
-    public DBpediaConnector(URL url) throws IOException {
+    public DBpediaConnector(URL url) throws IOException, InterruptedException {
         preUrl = new URL(url.toString().replaceAll("resource", "page"));
         connection = (HttpURLConnection) preUrl.openConnection();
         responseCode = connection.getResponseCode();
         responseMessage = connection.getResponseMessage();   
+        Thread.sleep(2000);
         currentUrl = connection.getURL().toString();
     }
     
