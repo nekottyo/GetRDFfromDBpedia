@@ -57,7 +57,7 @@ public class HtmlParserTest {
      * Test of main method, of class HtmlParser.
      */
     @Test
-    public void testMain() {
+    public void testMain() throws InterruptedException {
         System.out.println("main");
         String[] args = null;
         HtmlParser.main(args);
